@@ -12,6 +12,7 @@ module SCrypt
     # Bind the external functions
     attach_function :sc_calibrate, [:size_t, :double, :double, :pointer], :int, :blocking => true
     attach_function :crypto_scrypt, [:pointer, :size_t, :pointer, :size_t, :uint64, :uint32, :uint32, :pointer, :size_t], :int, :blocking => true # todo
+    attach_function :scrypt_1024_1_1_256, [:pointer, :pointer], :void, :blocking => true
   end
 
   module Errors
